@@ -17,6 +17,8 @@ function generatePoem(chars = ['あ', 'い', 'う', 'え', 'お']) {
 window.addEventListener('DOMContentLoaded', () => {
     const outputDiv = document.getElementById('output');
     outputDiv.innerHTML = generatePoem();
+    updateClock(); // 初期表示
+    setInterval(updateClock, 1000); // 毎秒更新
 });
 
 const outputDiv = document.getElementById("output");
@@ -36,5 +38,4 @@ function updateClock() {
   document.getElementById('clock').textContent = timeString;
 }
 
-updateClock(); // 初期表示
-setInterval(updateClock, 1000); // 毎秒更新
+
